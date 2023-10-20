@@ -8,17 +8,45 @@
 import SwiftUI
 
 struct ProfileView: View {
-    var viewModel: ProfileViewModel = ProfileViewModel()
+    @StateObject var viewModel: ProfileViewModel = ProfileViewModel()
     var body: some View {
         NavigationStack {
             VStack {
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-                TDLButton(title: "SignOut", backgroundColor: Color.red) {
-                    viewModel.logout()
+                if let user = viewModel.user {
+                    Image(systemName: "person.circle")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .foregroundColor(.yellow)
+                        .frame(width: 100, height: 100)
+                    
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text("Name: ")
+                            Text(user.name)
+                        }
+                        HStack {
+                            Text("Email: ")
+                            Text(user.email)
+                        }
+                        HStack {
+                            Text("Member Since: ")
+                            Text("\(Date(timeIntervalSince1970: user.joined).formatted(date: .abbreviated, time: .shortened))")
+                        }
+                    }
+                    Spacer()
+                    TDLButton(title: "Log Out", backgroundColor: Color.red) {
+                        viewModel.logout()
+                    }
+                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                    Spacer()
+                } else {
+                    Text("Fetching Profile data...")
                 }
-                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
             }
-            .navigationTitle("To Do List")
+            .navigationTitle("Profile")
+        }
+        .onAppear {
+            viewModel.fetchUser()
         }
     }
 }
