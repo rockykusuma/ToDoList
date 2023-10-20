@@ -10,14 +10,18 @@ import FirebaseAuth
 
 final class MainViewModel: ObservableObject {
     
-    @Published var currentUserId: String = ""
+    @Published var currentUserId: String = "123"
     private var handler: AuthStateDidChangeListenerHandle?
     
     init() {
         self.handler = Auth.auth().addStateDidChangeListener { [weak self] _, user in
             DispatchQueue.main.async {
-                print("Previoulsy logged user-> \(user?.uid ?? "")")
-                self?.currentUserId = user?.uid ?? ""
+                if let uid = user?.uid {
+                    self?.currentUserId = uid
+                    print("Previoulsy logged user-> \(uid)")
+                } else {
+                    self?.currentUserId.removeAll()
+                }
             }            
         }
     }

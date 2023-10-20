@@ -10,7 +10,6 @@
 		96018C792AE28C3900C97B73 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96018C782AE28C3900C97B73 /* ItemViewModel.swift */; };
 		96018C7B2AE299E300C97B73 /* ToDoListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96018C7A2AE299E300C97B73 /* ToDoListItemView.swift */; };
 		96018C7E2AE29CEF00C97B73 /* ToDoListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96018C7D2AE29CEF00C97B73 /* ToDoListItemViewModel.swift */; };
-		96018C802AE2AAAE00C97B73 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96018C7F2AE2AAAD00C97B73 /* Launch Screen.storyboard */; };
 		96627FBE2AE1B96A0034CBB8 /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96627FBD2AE1B96A0034CBB8 /* ToDoListApp.swift */; };
 		96627FC02AE1B96A0034CBB8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96627FBF2AE1B96A0034CBB8 /* MainView.swift */; };
 		96627FC22AE1B96B0034CBB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96627FC12AE1B96B0034CBB8 /* Assets.xcassets */; };
@@ -35,6 +34,7 @@
 		9662801F2AE1CFED0034CBB8 /* TDLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9662801E2AE1CFED0034CBB8 /* TDLButton.swift */; };
 		966280232AE1D3F00034CBB8 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966280222AE1D3F00034CBB8 /* String+Ext.swift */; };
 		966306072AE2F002001446AF /* NoItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966306062AE2F002001446AF /* NoItemsView.swift */; };
+		966306092AE308B2001446AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966306082AE308B2001446AF /* LaunchScreen.storyboard */; };
 		969B43E52AE251ED00638BF9 /* Encodable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B43E42AE251ED00638BF9 /* Encodable+Ext.swift */; };
 		969B43EA2AE2532A00638BF9 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B43E92AE2532A00638BF9 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -53,7 +53,6 @@
 		96018C782AE28C3900C97B73 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		96018C7A2AE299E300C97B73 /* ToDoListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItemView.swift; sourceTree = "<group>"; };
 		96018C7D2AE29CEF00C97B73 /* ToDoListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItemViewModel.swift; sourceTree = "<group>"; };
-		96018C7F2AE2AAAD00C97B73 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		96627FBA2AE1B96A0034CBB8 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96627FBD2AE1B96A0034CBB8 /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
 		96627FBF2AE1B96A0034CBB8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		9662801E2AE1CFED0034CBB8 /* TDLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDLButton.swift; sourceTree = "<group>"; };
 		966280222AE1D3F00034CBB8 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		966306062AE2F002001446AF /* NoItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoItemsView.swift; sourceTree = "<group>"; };
+		966306082AE308B2001446AF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		969B43E42AE251ED00638BF9 /* Encodable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Ext.swift"; sourceTree = "<group>"; };
 		969B43E92AE2532A00638BF9 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,7 +193,7 @@
 			children = (
 				96627FC12AE1B96B0034CBB8 /* Assets.xcassets */,
 				96627FEE2AE1BB1F0034CBB8 /* GoogleService-Info.plist */,
-				96018C7F2AE2AAAD00C97B73 /* Launch Screen.storyboard */,
+				966306082AE308B2001446AF /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -451,8 +451,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				96627FC52AE1B96B0034CBB8 /* Preview Assets.xcassets in Resources */,
+				966306092AE308B2001446AF /* LaunchScreen.storyboard in Resources */,
 				96627FC22AE1B96B0034CBB8 /* Assets.xcassets in Resources */,
-				96018C802AE2AAAE00C97B73 /* Launch Screen.storyboard in Resources */,
 				96627FEF2AE1BB1F0034CBB8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -649,7 +649,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = " ";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -679,7 +679,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = " ";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
