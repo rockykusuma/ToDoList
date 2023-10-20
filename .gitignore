@@ -1,0 +1,8 @@
+**/**.DS_Store
+**/**.orig
+**/xcuserdata
+Pods/
+.DS_Store
+*.mobileprovision
+*.ipa
+*.dSYM.*
