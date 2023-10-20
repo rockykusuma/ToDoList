@@ -19,21 +19,16 @@ struct ToDoListView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                List(items) { item in
-                    ToDoListItemView(item: item)
-                        .swipeActions {
-                            Button {
-                                viewModel.deleteItem(id: item.id)
-                            } label: {
-                                Text("Delete")
-                            }
-                            .tint(.red)
-                        }
+            ZStack {
+                if items.isEmpty {
+                    NoItemsView()
+                        .transition(AnyTransition.opacity.animation(.easeIn))
+                } else {
+                    listView
                 }
-                .listStyle(.plain)
             }
-            .navigationTitle("To Do List")
+            .navigationTitle("Todo List 📝")
+            .navigationViewStyle(.stack)
             .toolbar {
                 Button {
                     viewModel.shouldShowItemSheet = true
@@ -42,9 +37,24 @@ struct ToDoListView: View {
                 }
             }
             .sheet(isPresented: $viewModel.shouldShowItemSheet) {
-                ItemView(newItemPresented: $viewModel.shouldShowItemSheet)
+                ItemView()
             }
         }
+    }
+    
+    var listView: some View {
+        List(items) { item in
+            ToDoListItemView(item: item)
+                .swipeActions {
+                    Button {
+                        viewModel.deleteItem(id: item.id)
+                    } label: {
+                        Text("Delete")
+                    }
+                    .tint(.red)
+                }
+        }
+        .listStyle(.plain)
     }
 }
 

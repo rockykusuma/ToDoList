@@ -22,9 +22,12 @@ struct ToDoListItemView: View {
             }
             Spacer()
             Button {
-                viewModel.toggleCheckMark(item: item)
+                withAnimation(.linear) {
+                    viewModel.toggleCheckMark(item: item)
+                }                
             } label: {
                 Image(systemName: item.isDone ? "checkmark.circle.fill" : "circle")
+                    .foregroundStyle(item.isDone ? .green : .red)
             }
         }
     }
@@ -32,4 +35,5 @@ struct ToDoListItemView: View {
 
 #Preview {
     ToDoListItemView(item: ToDoListItem(id: "123", title: "Get Curd", dueDate: Date().timeIntervalSince1970, createdDate: Date().timeIntervalSince1970, isDone: false))
+        .previewLayout(.sizeThatFits)
 }

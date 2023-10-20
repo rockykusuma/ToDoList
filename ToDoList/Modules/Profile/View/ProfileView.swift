@@ -44,10 +44,11 @@ struct ProfileView: View {
                 }
             }
             .navigationTitle("Profile")
-        }
-        .onAppear {
-            viewModel.fetchUser()
-        }
+            .navigationViewStyle(.stack)
+            .onAppear {
+                viewModel.fetchUser()
+            }
+        }        
     }
 }
 

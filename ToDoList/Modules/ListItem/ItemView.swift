@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct ItemView: View {
-    
     @StateObject var viewModel: ItemViewModel = ItemViewModel()
-    @Binding var newItemPresented: Bool
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         VStack {
-            Text("New Item")
+            Text("Add an Item ✍🏽")
                 .font(.headline)
                 .padding()
             Form {
@@ -26,7 +25,7 @@ struct ItemView: View {
                 TDLButton(title: "Save", backgroundColor: .purple) {
                     if viewModel.canSave {
                         viewModel.save()
-                        newItemPresented = false
+                        dismiss()
                     } else {
                         viewModel.showAlert = true
                     }
@@ -42,5 +41,5 @@ struct ItemView: View {
 }
 
 #Preview {
-    ItemView(newItemPresented: .constant(false))
+    ItemView()        
 }

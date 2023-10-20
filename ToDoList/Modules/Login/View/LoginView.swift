@@ -10,9 +10,9 @@ import SwiftUI
 struct LoginView: View {
     @State var viewModel: LoginViewModel = LoginViewModel()
     var body: some View {
-        NavigationStack {
+        ZStack {
             VStack {
-                HeaderView(title: "To Do List", subTitle: "Note it down", angle: -40, backgroundColor: .mint)
+                HeaderView(title: "Todo List", subTitle: "Note it down ✍🏽", angle: -40, backgroundColor: .mint)
                 formView
                 registrationView
             }
@@ -32,16 +32,20 @@ extension LoginView {
                 .textInputAutocapitalization(.none)
                 .autocorrectionDisabled()
             SecureField("Password", text: $viewModel.password)
-            TDLButton(title: "Log In", backgroundColor: .mint) {
-                viewModel.login()
-            }
-            .padding(.top, 16)
+            buttonView
         }
+    }
+    
+    var buttonView: some View {        
+        TDLButton(title: "Log In", backgroundColor: .mint) {
+            viewModel.login()
+        }
+        .padding(.top, 16)
     }
     
     var registrationView: some View {
         VStack {
-            Text("New around here")
+            Text("New user!")
             NavigationLink {
                 RegistrationView()
             } label: {

@@ -34,6 +34,7 @@
 		9662801B2AE1CC430034CBB8 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9662801A2AE1CC430034CBB8 /* HeaderView.swift */; };
 		9662801F2AE1CFED0034CBB8 /* TDLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9662801E2AE1CFED0034CBB8 /* TDLButton.swift */; };
 		966280232AE1D3F00034CBB8 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966280222AE1D3F00034CBB8 /* String+Ext.swift */; };
+		966306072AE2F002001446AF /* NoItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966306062AE2F002001446AF /* NoItemsView.swift */; };
 		969B43E52AE251ED00638BF9 /* Encodable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B43E42AE251ED00638BF9 /* Encodable+Ext.swift */; };
 		969B43EA2AE2532A00638BF9 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B43E92AE2532A00638BF9 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -75,6 +76,7 @@
 		9662801A2AE1CC430034CBB8 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		9662801E2AE1CFED0034CBB8 /* TDLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDLButton.swift; sourceTree = "<group>"; };
 		966280222AE1D3F00034CBB8 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		966306062AE2F002001446AF /* NoItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoItemsView.swift; sourceTree = "<group>"; };
 		969B43E42AE251ED00638BF9 /* Encodable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Ext.swift"; sourceTree = "<group>"; };
 		969B43E92AE2532A00638BF9 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -262,6 +264,7 @@
 			children = (
 				96018C7C2AE29CD000C97B73 /* ListRow */,
 				966280012AE1BF560034CBB8 /* ToDoListView.swift */,
+				966306062AE2F002001446AF /* NoItemsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				96018C7E2AE29CEF00C97B73 /* ToDoListItemViewModel.swift in Sources */,
 				96627FBE2AE1B96A0034CBB8 /* ToDoListApp.swift in Sources */,
 				966280112AE1BFFF0034CBB8 /* ToDoListItem.swift in Sources */,
+				966306072AE2F002001446AF /* NoItemsView.swift in Sources */,
 				969B43E52AE251ED00638BF9 /* Encodable+Ext.swift in Sources */,
 				966280022AE1BF560034CBB8 /* ToDoListView.swift in Sources */,
 				966280232AE1D3F00034CBB8 /* String+Ext.swift in Sources */,
@@ -646,7 +650,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = " ";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -676,7 +680,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = " ";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
