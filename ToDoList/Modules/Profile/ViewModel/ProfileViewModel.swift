@@ -6,3 +6,16 @@
 //
 
 import Foundation
+import FirebaseAuth
+
+final class ProfileViewModel {
+    
+    
+    func logout() {
+        do {
+            try Auth.auth().signOut()
+            } catch let err {
+                print(err)
+        }
+    }
+}

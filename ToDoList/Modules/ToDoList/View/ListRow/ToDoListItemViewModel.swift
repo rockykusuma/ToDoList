@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class ToDoListItemViewModel: ObservableObject {
+    
+    
+    func toggleCheckMark(item: ToDoListItem) {
+        
+    }
+}

@@ -8,9 +8,39 @@
 import SwiftUI
 
 struct RegistrationView: View {
+    
+    @State var viewModel: RegistrationViewModel = RegistrationViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HeaderView(title: "Register", subTitle: "Start Organizing Notes", angle: -40, backgroundColor: .brown)
+            formView
+            Spacer()
+        }
+        .offset(y: -44)
     }
+}
+
+extension RegistrationView {
+    var formView: some View {
+        Form {
+            if let errorMessage = viewModel.errorMessage {
+                Text(errorMessage)
+                    .foregroundStyle(.red)
+            }
+            TextField("Full Name", text: $viewModel.name)
+                .autocorrectionDisabled()
+            TextField("Email Address", text: $viewModel.email)
+                .textInputAutocapitalization(.none)
+                .autocorrectionDisabled()
+            SecureField("Password", text: $viewModel.password)
+            TDLButton(title: "Sign Up", backgroundColor: .brown) {
+                viewModel.registration()
+            }
+            .padding(.top, 16)
+        }
+    }
+    
 }
 
 #Preview {
